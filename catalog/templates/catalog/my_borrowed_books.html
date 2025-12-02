@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <h1>Мои заимствованные книги</h1>
+  <ul>
+  {% for bookinst in bookinstance_list %}
+    <li>{{ bookinst.book.title }} (до {{ bookinst.due_back }})</li>
+  {% empty %}
+    <li>Нет заимствованных книг.</li>
+  {% endfor %}
+  </ul>
+{% endblock %}

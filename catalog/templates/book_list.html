@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Book List</h1>
+<ul>
+  {% for book in book_list %}
+    <li>{{ book.title }} ({{ book.author }})</li>
+  {% empty %}
+    <li>No books available.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
